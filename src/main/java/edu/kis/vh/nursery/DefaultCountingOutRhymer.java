@@ -2,19 +2,19 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int SIZE_OF_NUMBERS_ARRAY = 12;
-    public static final int TOTAL_VALUE = -1;
-    public static final int MAX_CAPACITY = 11;
+    private static final int SIZE_OF_NUMBERS_ARRAY = 12;
+    private static final int TOTAL_VALUE = -1;
+    private static final int MAX_CAPACITY = 11;
     private final int[] numbers = new int[SIZE_OF_NUMBERS_ARRAY];
 
-    public int total = TOTAL_VALUE;
+    private int total = TOTAL_VALUE;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == TOTAL_VALUE;
     }
 
